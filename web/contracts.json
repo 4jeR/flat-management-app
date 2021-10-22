@@ -1,0 +1,22 @@
+[
+    {
+        "idx": "11",
+        "room_id": "1",
+        "rent_price": "900",
+        "first_name": "Jan",
+        "last_name": "Kowalski",
+        "phone_number": "123456789",
+        "start_date": "09-01-2021",
+        "end_date": "06-06-2022"
+    },
+    {
+        "idx": "22",
+        "room_id": "2",
+        "rent_price": "850",
+        "first_name": "Piotr",
+        "last_name": "Nowak",
+        "phone_number": "987654321",
+        "start_date": "12-01-2021",
+        "end_date": "05-06-2024"
+    }
+]

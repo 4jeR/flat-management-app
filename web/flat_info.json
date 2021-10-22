@@ -1,0 +1,88 @@
+[
+    {
+        "id": "1",
+        "short_name": "Flat1 123/32",
+        "full_address": "Flat1 123/32, 11-210 CityA",
+        "city": "CityA",
+        "rooms_count": "3",
+        "rooms": [
+            {
+                "idx": "1",
+                "area": "9m2",
+                "price": "800",
+                "occupied": true,
+                "photos_path": "room_1",
+                "flat_id": "1",
+                "contract_id": "11"
+            },
+            {
+                "idx": "2",
+                "area": "13m2",
+                "price": "950",
+                "occupied": false,
+                "photos_path": "room_2",
+                "flat_id": "1",
+                "contract_id": "-1"
+            },
+            {
+                "idx": "3",
+                "area": "10m2",
+                "price": "800",
+                "occupied": false,
+                "photos_path": "room_3",
+                "flat_id": "1",
+                "contract_id": "-1"
+            }
+        ],
+        "block_number": "123",
+        "flat_number": "32",
+        "postal_code": "11-210",
+        "block_entry_code": "123456",
+        "total_area": "53m2",
+        "location_photo": "other/flat1_location.png",
+        "photos_path": "flat1_123_32"
+    },
+    {
+        "id": "2",
+        "short_name": "Flat2 45/10",
+        "full_address": "Flat2 45/10, 45-531 CityB",
+        "city": "CityB",
+        "rooms_count": "3",
+        "rooms": [
+            {
+                "idx": "1",
+                "area": "13.3m2",
+                "price": "900",
+                "occupied": false,
+                "photos_path": "room_1",
+                "flat_id": "2",
+                "contract_id": "-1"
+            },
+            {
+                "idx": "2",
+                "area": "14.4m2",
+                "price": "900",
+                "occupied": true,
+                "photos_path": "room_2",
+                "flat_id": "2",
+                "contract_id": "22"
+            },
+            {
+                "idx": "3",
+                "area": "9m2",
+                "price": "900",
+                "occupied": false,
+                "photos_path": "room_3",
+                "flat_id": "2",
+                "contract_id": "-1"
+            }
+        ],
+        "block_number": "45",
+        "flat_number": "10",
+        "postal_code": "45-531",
+        "block_entry_code": "345678",
+        "total_area": "60m2",
+        "location_photo": "other/flat2_location.png",
+        "photos_path": "flat2_45_10"
+    }
+]

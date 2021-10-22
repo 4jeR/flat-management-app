@@ -1,0 +1,108 @@
+body {
+    height: 100%;
+    /* background: linear-gradient(180deg, rgb(202, 192, 185) 0%, rgb(157, 180, 133) 100%); */
+    background: linear-gradient(180deg, rgb(238, 230, 221) 0%, rgb(141, 143, 139) 100%);
+    background-repeat: no-repeat;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: black;
+    font-size: 30px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    color: black;
+}   
+
+p {
+    font-size: 24px;
+}
+
+p:hover {
+    opacity: 80%;
+    cursor: crosshair;
+    font-style: italic;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 1000;
+    padding-bottom: -100px;
+}
+
+hr {
+margin-top: 1rem;
+margin-bottom: 1rem;
+border: 2;
+width: 90%;
+border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+header span-header{
+    margin-right: 10px;
+    position: relative;
+}
+
+header .navbar{
+    max-height: 70px;
+    min-height: 30px;
+}
+
+.navbar-nav > li:first-child{
+    padding-left:30px;
+}
+
+.btn-group{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#header-logo:hover{
+    opacity: 80%;
+}
+
+.table-scrollbar {
+    position: relative;
+    height: 610px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    background: gray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(46, 25, 0);
+    border-radius: 55px;
+}
+
+
+
+#link-to-sinus-model:hover > #show-data-main-image{
+    background-color: brown;
+}
+
+
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 2px solid white;
+    text-align: center;
+}

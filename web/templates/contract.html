@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row pt-5">
+    <div class="col-sm-12 col-md-12 pt-5 ml-0 mr-auto">
+        <a class="btn btn-large btn-info col-md-2 offset-5 mt-3" href="{{ url_for('v_flat', flat_id=flat_id) }}">Powrót</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-12 pt-5 ml-0 mr-auto">
+        <h1><i><b>Widok umowy </b></i></h1>
+    </div>
+</div>
+
+
+<div class="row pt-5">
+    <div class="col-sm-6 col-md-6">
+        <h3><b>Czynsz:</b> {{ contract['rent_price'] }} </h3>
+        <h3><b>Imię:</b> {{ contract['first_name'] }} </h3>
+        <h3><b>Nazwisko:</b> {{ contract['last_name'] }} </h3>
+        <h3><b>Kontakt:</b> {{ contract['phone_number'] }} </h3>
+        <h3><b>Od:</b> {{ contract['start_date'] }} </h3>
+        <h3><b>Do:</b> {{ contract['end_date'] }} </h3>
+        <div class="progress w-75 mt-5">
+            <div class="progress-bar progress-bar-striped " role="progressbar" style="{{ progress_bar_value }}"></div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6">
+        <img class="w-100 mr-auto ml-auto" src="{{ url_for('static', filename='other/contract_overview.svg') }}" >
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row pt-5">
+    <div class="col-sm-12 col-md-12">
+        <h2 class="offset-4 col-sm-6 col-md-6 pt-5"><i>Przegląd mieszkań</i></h2>
+    </div>
+</div>
+<div class="row pt-1">
+    {% for flat in flats %}
+    <div class="offset-1 col-sm-4 col-md-4 mt-5 rounded-bottom">
+        <form method="GET">
+            <div class="form-group">
+                <h3 class="offset-2 col-sm-10 col-md-10">
+                    {{ flat.short_name }} 
+                </h3>
+                <a class="offset-2 col-sm-8 col-md-8 btn btn-large btn-dark nav-link text-warning" href="{{ url_for('v_flat', flat_id=flat.id) }}">Zobacz</a>
+            </div>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row pt-5">
+    <table class="table table-bordered table-dark table-bordered">
+        <thead>
+            <tr>
+                {% for flat in flats %}
+                <th scope="col" colspan="{{ flat.rooms_count }}">{{ flat.short_name }}</th> 
+                {% endfor %}
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr >
+
+{% for flat in flats %}
+    {% for room in flat.rooms %}
+                {% if room.occupied %}
+                <td class="bg-success">Pokój {{ room.area }} </td>
+                {% else %}
+                <td class="bg-danger">Pokój {{ room.area }} </td>
+                {% endif %}
+    {% endfor %}
+    
+    {% endfor %}
+</tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row pt-1">
+    <div class="col ocl-sm-5 col-md-5 offset-3">
+        <table class="table table-sm table-bordered table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2">oznaczenia</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td class="bg-success">zajęte</td>
+                    <td class="bg-danger">wolne</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="row pt-3">
+    <div class="col-md-12">
+        <h1 class="offset-2 col-sm-7 col-md-7 pt-5">Wynajęte pokoje: <b> {{ occupied_rooms }} / {{ total_rooms }}</b></h1>
+    </div>
+</div>
+
+<div class="row pt-3">
+    <div class="offset-4 col-sm-3 col-md-3">
+        <a class="btn btn-large btn-dark nav-link text-warning" target="_blank" href="static/other/wzor_umowy.pdf">Wzór umowy (PDF)</a>
+    </div>
+</div>
+{% endblock content %}
